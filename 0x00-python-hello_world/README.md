@@ -9,3 +9,4 @@ This is the first folder for the first set of tasks
 6-concat.py concatenates two strings together
 7-edges.py performs indexing operations on a string
 8-concat_edges.py performs concatenation and indexing of a string
+9-easter_egg.py prints the Zen of python
