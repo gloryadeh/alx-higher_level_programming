@@ -7,4 +7,6 @@ This is the third folder for the third set of tasks
 4-hidden_discovery prints all the names defined by a compile module
 5-variable_load imports a variable from a file and prints its value
 100-my_calculator imports all functions from calculator_1.py and handles basic operations
-101-easy_print prints #pythoniscool to stdout
+101-easy_print prints #pythoniscool to stdout by importing pythoniscool.py
+102-magic_calculation performs a calculation
+103-fast_alphabet.py prints the alphabet in uppercase
