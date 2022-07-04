@@ -4,7 +4,7 @@
  * is_palindrome - calls helper function to check if a
  * singly linked list is a palindrome
  * @head: head pointer
- * 0 or 1
+ * Return: 0 or 1
  */
 int is_palindrome(listint_t **head)
 {
