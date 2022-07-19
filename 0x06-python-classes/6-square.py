@@ -1,11 +1,26 @@
 #!/usr/bin/python3
+"""Square class with private instance attribute size"""
+
+
 class Square:
+    """Arguments:
+            size: size of Square
+            position: starting point of square
+    """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
 
     @property
     def size(self):
+        """size: size of sqaure
+
+        setter validates size is an integer and >= 0
+
+        Raises:
+            TypeError: if size is not an int
+            ValueError: if size is < 0
+        """
         return self.__size
 
     @size.setter
@@ -19,16 +34,27 @@ class Square:
 
     @property
     def position(self):
+        """position: position of the sqaure
+
+        setter validates that position is a tuple of 2 positive integers
+
+        Raises:
+            TypeError: if position is not a tuple of 2 positive integers
+        """
         return self.__position
 
     @position.setter
     def position(self, value):
         if not self.__check_position(value):
-            raise Exception("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
 
     def __check_position(self, position):
+        """ checks if position is a tuple of 2 positive integers
+
+        Returns: True if position is valid, False otherwise
+        """
         if type(position) is not tuple or len(position) != 2:
             return False
         elif type(position[0]) is not int or position[0] < 0:
@@ -39,9 +65,13 @@ class Square:
             return True
 
     def area(self):
+        """Returns the calculated area of a Square instance"""
         return self.size ** 2
 
     def my_print(self):
+        """Prints to stdout the square with the character # or an empty
+        line if size is 0, position indicates by spaces and new lines
+        """
         if self.size == 0:
             print()
             return

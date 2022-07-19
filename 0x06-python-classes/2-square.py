@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""Square class with private instance attribute size"""
+
+
 class Square:
+    """Arguments:
+            size: size of Square
+    """
     def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
