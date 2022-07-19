@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""MagicClas"""
+
+
 class MagicClass:
     """Magic class that does the same as given bytecode (Circle)"""
     def __init__(self, radius=0):
@@ -10,6 +13,7 @@ class MagicClass:
         Raises:
             TypeError: if radius is not int or float
         """
+        sel.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
         self.__radius = radius

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Node class with private instance attribute data"""
 
 
 class Node:
