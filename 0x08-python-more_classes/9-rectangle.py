@@ -109,4 +109,5 @@ class Rectangle:
         Paramteres:
             size: height and width of the new instance
         """
-        return cls(size, size)
+        cls.width = cls.height = size
+        return cls(cls.width, cls.height)
