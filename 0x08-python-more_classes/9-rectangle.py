@@ -34,23 +34,6 @@ class Rectangle:
 
         print("Bye rectangle...")
 
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """Returns the biggest rectangle based on the area
-
-        Raises:
-            TypeError: if rect_1 or rect_2 is not an instance of Rectangle
-        """
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        elif not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        else:
-            if rect_1.area() > rect_2.area():
-                return rect_1
-            else:
-                return rect_2
-
     @property
     def width(self):
         """width: width of a rectangle
@@ -104,6 +87,21 @@ class Rectangle:
         else:
             perimeter = 2 * (self.height + self.width)
         return perimeter
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Returns the biggest rectangle based on the area
+
+        Raises:
+            TypeError: if rect_1 or rect_2 is not an instance of Rectangle
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() > rect_2.area():
+            return rect_1
+        return rect_2
 
     @classmethod
     def square(cls, size=0):
