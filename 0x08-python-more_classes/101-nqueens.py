@@ -22,15 +22,6 @@ def solve(queens, size, start):
         board[x][y] = 0
     return solve(queens, size, (x, y + 1))
 
-#    for x in range(start[0], size):
-#        for y in range(start[1], size):
-#            if board[x][y] == 0 and isValid(x, y, size):
-#                board[x][y] = 1
-#                if solve(queens - 1, size, (x + 1, 0)):
-#                    return True
-#                board[x][y] = 0
-#    return False
-
 
 def isValid(x, y, size):
     """Returns whether a coordinate is valid and will not be attacked
@@ -58,6 +49,7 @@ def isValid(x, y, size):
             if i - j == x - y and board[i][j] == 1:
                 return False
     return True
+
 
 if __name__ == "__main__":
     from sys import argv
