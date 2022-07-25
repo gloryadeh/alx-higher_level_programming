@@ -8,6 +8,11 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        """Instantiates width and height using property setter
+        Args:
+            width: width of rectangle
+            height: height of rectangle
+        """
         self.height = height
         self.width = width
 
@@ -30,9 +35,9 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(self):
-        Rectangle.number_of_instances -= 1
-
+        """Prints 'Bye rectangle...' when instance is deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
