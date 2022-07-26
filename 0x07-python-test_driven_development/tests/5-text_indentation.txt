@@ -1,0 +1,52 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text = "Glory is my name. What is your name? This is a test: testing tester"
+>>> text_indentation(text)
+Glory is my name.
+<BLANKLINE>
+What is your name?
+<BLANKLINE>
+This is a test:
+<BLANKLINE>
+testing tester
+>>> text_indentation(4)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text = "Glorious"
+>>> text_indentation(text)
+Glorious
+
+>>> text = "T.o.kon.?i Is: M.y.. Lady."
+>>> text_indentation(text)
+T.
+<BLANKLINE>
+o.
+<BLANKLINE>
+kon.
+<BLANKLINE>
+?
+<BLANKLINE>
+i Is:
+<BLANKLINE>
+M.
+<BLANKLINE>
+y.
+<BLANKLINE>
+.
+<BLANKLINE>
+Lady.
+<BLANKLINE>
+
+>>> text_indentation("?Good")
+?
+<BLANKLINE>
+Good
+
+>>> text_indentation("")
+>>> text_indentation("    ")
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'

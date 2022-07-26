@@ -1,0 +1,58 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+Check if first and last name are strings
+
+>>> say_my_name("Bobby", "Joe")
+My name is Bobby Joe
+
+>>> say_my_name(None, "Joe")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Joe", 4)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name(3.9, 4)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(3.9, "Joe")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Joe", float('nan'))
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name(float('nan'), "Favour")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(["glory"], "Favour")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Joe", ["Biden"])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+
+Check if argument provided is less than or equal to two
+
+>>> say_my_name("Bobby")
+My name is Bobby
+
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
